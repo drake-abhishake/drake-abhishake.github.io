@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HOTLINE BLING</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body id="body">
+		<audio autoplay loop>
+			<source src="drake.mp3" type="audio/mp3">
+		</audio>
+		<div style="width:100; height:auto; text-align: center;">
+			<br><br><br><br><br>
+			<img style="height:auto;" id="drake" src="drake_abhi.gif"/>
+		</div>
+		<script>
+			function randomColor() {
+				var r = Math.floor(Math.random() * 256);
+				var g = Math.floor(Math.random() * 256);
+				var b = Math.floor(Math.random() * 256);
+				document.getElementById("body").style.backgroundColor = "rgb("+r+","+g+","+b+")";
+			}
+			
+			function changeSrc() {
+				document.getElementById("drake").src = "mansi.png";
+				setTimeout(function(){
+					document.getElementById("drake").src = "drake_abhi.gif";
+				}, 1000);
+			}
+
+			setInterval(randomColor, 1200);
+			setInterval(changeSrc, 6000);
+		</script>
+	</body>
+</html>
